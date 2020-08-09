@@ -37,7 +37,7 @@ export default createBottomTabNavigator(
         tabBarIcon: ({ tintColor }) => (
           <Image
             source={require("./assets/airbnb.png")}
-            style={{ height: 24, width: 24, tintColor: tintColor }}
+            style={{ height: 25, width: 24, tintColor: tintColor }}
           />
         ),
       },
