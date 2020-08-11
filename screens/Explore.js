@@ -13,7 +13,7 @@ import {
 } from "react-native";
 
 import Category from "../components/Category";
-
+import Home from "../components/Explore/Home";
 import Icon from "react-native-vector-icons/Ionicons";
 
 const { height, width } = Dimensions.get("window");
@@ -123,33 +123,8 @@ class Explore extends Component {
               >
                 Homes around the world
               </Text>
-              <View style={{ paddingHorizontal: 20, marginTop: 20 }}></View>
-              <View
-                style={{
-                  width: width / 2,
-                  height: width / 2,
-                  borderWidth: 0.5,
-                  borderColor: "#dddddd",
-                }}
-              >
-                <View style={{ flex: 1 }}>
-                  <Image
-                    style={{
-                      flex: 1,
-                      width: null,
-                      height: null,
-                      resizeMode: "cover",
-                    }}
-                    source={require("../assets/home.jpg")}
-                  />
-                </View>
-                <View style={{ flex: 1 }}>
-                  <Text style={{ fontSize: 14, color: "#b63838" }}>
-                    PRIVATE ROOM - 2 BEDS
-                  </Text>
-                  <Text>The Cozy Palace</Text>
-                  <Text>82$</Text>
-                </View>
+              <View style={{ paddingHorizontal: 20, marginTop: 20 }}>
+                <Home width={width} />
               </View>
             </View>
           </ScrollView>
