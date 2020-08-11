@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 
 import { View, Text, StyleSheet, Image } from "react-native";
-
+import StarRating from "react-native-star-rating";
 class Home extends Component {
   render() {
     return (
       <View
         style={{
-          width: this.props.width / 2,
-          height: this.props.width / 2,
+          width: this.props.width / 2 - 30,
+          height: this.props.width / 2 - 30,
           borderWidth: 0.5,
           borderColor: "#dddddd",
         }}
@@ -32,11 +32,19 @@ class Home extends Component {
             paddingLeft: 10,
           }}
         >
-          <Text style={{ fontSize: 14, color: "#b63838" }}>
-            PRIVATE ROOM - 2 BEDS
+          <Text style={{ fontSize: 10, color: "#b63838" }}>
+            {this.props.type}
           </Text>
-          <Text>The Cozy Palace</Text>
-          <Text>82$</Text>
+          <Text style={{ fontSize: 12, fontWeight: "bold" }}>
+            {this.props.name}
+          </Text>
+          <Text style={{ fontSize: 10 }}>{this.props.price}</Text>
+          <StarRating
+            disable={true}
+            maxStars={5}
+            rating={this.props.rating}
+            starSize={10}
+          />
         </View>
       </View>
     );
